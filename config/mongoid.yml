@@ -1,0 +1,20 @@
+development:
+  clients:
+    default:
+      uri: <%= ENV['MONGODB_URL'] || 'mongodb://localhost:27017/flights_test_development' %>
+      options:
+        server_selection_timeout: 5
+
+test:
+  clients:
+    default:
+      uri: <%= ENV['MONGODB_URL'] || 'mongodb://localhost:27017/flights_test_test' %>
+      options:
+        server_selection_timeout: 5
+
+production:
+  clients:
+    default:
+      uri: <%= ENV['MONGODB_URL'] %>
+      options:
+        server_selection_timeout: 5 
